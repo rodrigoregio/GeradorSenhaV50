@@ -6,28 +6,15 @@ package top.rregio.GeraSenhaV50.logica;
  * @author Rodrigo Régio de Araújo
  * @version 05/02/2020
  */
-public class AlteraTexto
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    String texto;
-
-    /**
-     * Construtor para objetos da classe AlteraTexto
-     */
-    public AlteraTexto()
-    {
-        // inicializa variáveis de instância
-        texto = "";
-    }
-
+public class AlteraTexto{
     /**
      * Metodo para deixar minusculo todo o texto digitado.
      * @param texto String - e o texto a ser minusculo.
      * @return novoTexto String - e o texto ja transformado em somente letras minusculas.
      */
     public String minusculo(String texto){
-        String novoTexto = texto.toLowerCase();
-        return novoTexto;
+        return texto.toLowerCase();
+        //return novoTexto;
     }
 
     /**
@@ -36,8 +23,8 @@ public class AlteraTexto
      * @return novoTexto String - e o texto ja transformado em somente letras maiusculas. 
      */
     public String maiusculo(String texto){
-        String novoTexto = texto.toUpperCase();
-        return novoTexto;
+        return texto.toUpperCase();
+        //return novoTexto;
     }
 
     /**
@@ -46,9 +33,7 @@ public class AlteraTexto
      * @return notoTexto String - é o texto já invertido
      */
     public String inverte(String texto){
-        StringBuilder novoTexto = new StringBuilder(texto);
-        novoTexto.reverse();
-        return novoTexto.toString();
+        return new StringBuilder(texto).reverse().toString();
     }
 
     /**
@@ -57,22 +42,18 @@ public class AlteraTexto
      * @return novoTexto String - é o texto já invertido
      */
     public String inverteMetade(String texto){
-        //Pegando o tamanho do texto
-        int tam = texto.length();
-        String novoTexto;
-        novoTexto = "";
-        if(tam % 2 == 0){
+        if(texto.length() % 2 == 0){
             String a=texto.substring(0,texto.length()/2);
             String b= texto.substring(texto.length()/2);
-            novoTexto = b+a;
+            return b+a;
         }else{
             String a=texto.substring(0,(int)Math.floor(texto.length()/2));
             String b=texto.substring((int)Math.floor((texto.length()/2)+1));
             String c=texto.substring((int)Math.ceil(texto.length()/2),
                     (int)Math.ceil((texto.length()/2)+1));
-            novoTexto = b+c+a;
+            return b+c+a;
         }
-        return novoTexto;
+        //return novoTexto;
     }
 
     /**
@@ -144,8 +125,7 @@ public class AlteraTexto
                     break;
             }
         }
-        String sFinal = a48C.toString();//ao final a String sFinal recebe o arraylist a48C transformado em String
-        return sFinal;//retorna sFinal
+        return a48C.toString();//ao final a String sFinal recebe o arraylist a48C transformado em String
     }
 
     /**
