@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package top.rregio.GeraSenhaV50;
 
 import java.io.IOException;
@@ -13,7 +8,7 @@ import top.rregio.GeraSenhaV50.logica.AlteraTexto;
 import top.rregio.GeraSenhaV50.logica.Save2File;
 
 /**
- *
+ * Classe que gera a tela em Swing
  * @author Rodrigo
  */
 public class Tela extends javax.swing.JFrame {
@@ -21,7 +16,7 @@ public class Tela extends javax.swing.JFrame {
     AlteraTexto txt;
     DefaultListModel modeloLista=new DefaultListModel();
     /**
-     * Creates new form NewJFrame
+     * Cria o formulário
      */
     public Tela() {
         initComponents();

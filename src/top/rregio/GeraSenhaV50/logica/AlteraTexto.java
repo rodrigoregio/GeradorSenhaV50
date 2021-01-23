@@ -14,7 +14,6 @@ public class AlteraTexto{
      */
     public String minusculo(String texto){
         return texto.toLowerCase();
-        //return novoTexto;
     }
 
     /**
@@ -24,7 +23,6 @@ public class AlteraTexto{
      */
     public String maiusculo(String texto){
         return texto.toUpperCase();
-        //return novoTexto;
     }
 
     /**
@@ -53,7 +51,6 @@ public class AlteraTexto{
                     (int)Math.ceil((texto.length()/2)+1));
             return b+c+a;
         }
-        //return novoTexto;
     }
 
     /**
@@ -63,69 +60,51 @@ public class AlteraTexto{
      */
     public String L33TWithNumbers(String texto){
         char abc[];
-        abc = texto.toCharArray();//comando que torna o texto digitado em um array de caracteres
+        abc = texto.toCharArray();
         MinhaLista a48C=new MinhaLista();
 
-        for(int i=0;i<abc.length;i++){ //faça enquanto i for menor que o tamanho do array, incrementando 1 ao i
+        for(int i=0;i<abc.length;i++){
             switch (abc[i]) {
                 case 'O':
                 case 'o':
-                    //Se abc[i] for igual a 'O' ou 'o' o arraylist a48C recebe o caractere '0'
                     a48C.add('0');
                     break;
-            //Senão
                 case 'L':
                 case 'l':
-                    //Se abc[i] for igual a 'L' ou 'l' o arraylist a48C recebe o caractere '1'
                     a48C.add('1');
                     break;
-            //Senão
                 case 'E':
                 case 'e':
-                    //Se abc[i] for igual a 'E' ou 'e' o arraylist a48C recebe o caractere '3'
                     a48C.add('3');
                     break;
-            //Senão
                 case 'A':
                 case 'a':
-                    //Se abc[i] for igual a 'A' ou 'a' o arraylist a48C recebe o caractere '4'
                     a48C.add('4');
                     break;
-            //Senão
                 case 'S':
                 case 's':
-                    //Se abc[i] for igual a 'S' ou 's' o arraylist a48C recebe o caractere '5'
                     a48C.add('5');
                     break;
-            //Senão
                 case 'G':
-                    //Se abc[i] for igual a 'G' o arraylist a48C recebe o caractere '6'
                     a48C.add('6');
                     break;
-            //Senão
                 case 'T':
                 case 't':
-                    //Se abc[i] for igual a 'T' ou 't' o arraylist a48C recebe o caractere '7'
                     a48C.add('7');
                     break;
-            //Senão
                 case 'B':
                 case 'b':
-                    //Se abc[i] for igual a 'B' ou 'b' o arraylist a48C recebe o caractere '8'
                     a48C.add('8');
                     break;
-            //Senão
                 case 'g':
-                    //Se abc[i] for igual a 'g' o arraylist a48C recebe o caractere '9'
                     a48C.add('9');
                     break;
                 default:
-                    //Senão
-                    a48C.add(abc[i]);//O arraylist a48C recebe o mesmo caractere do array abc[i]
+                    a48C.add(abc[i]);
                     break;
             }
         }
-        return a48C.toString();//ao final a String sFinal recebe o arraylist a48C transformado em String
+        return a48C.toString();
     }
 
     /**
@@ -133,7 +112,7 @@ public class AlteraTexto{
      * @param texto String - Texto a ser alterado.
      * @return novoTexto String - Texto ja alterado.
      */
-    public String camelTxt(String texto){//Dado este nome
+    public String camelTxt(String texto){
         char abc[] = texto.toCharArray();
         MinhaLista AbC = new MinhaLista();
         AbC.add(abc[0]);
